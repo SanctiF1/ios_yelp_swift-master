@@ -58,7 +58,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if categories != nil{
             return categories.count
@@ -82,14 +81,11 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return filterGroups[section]
     }
     
-   
-    
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
         let indexPath = tableView.indexPathForCell(switchCell)
         switchStates[indexPath!.row] = value
         //print( "filters view controller got the sitch event")
     }
-    
     
     func yelpCategories() -> [[String:String]] {
         return [["name" : "Afghan", "code": "afghani"],
